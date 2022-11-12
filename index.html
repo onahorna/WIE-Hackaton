@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <!-- Simply set the `src` attribute to your MD file and win -->
+    <zero-md src="index.md"></zero-md>
+  </head>
+  <body>
+    <iframe
+      id="scratch"
+      src="https://scratch.mit.edu/projects/editor/"
+      width="80%"
+      height="800px"
+      style="border: 1px solid black"
+      text-aling: center;
+    >
+    </iframe>
+    <!--Storing the html file of framed website-->
+      </br>
+    <a href="#" onclick="getIframeContent('scratch');">
+      Get the content of Iframe
+    </a>
+
+    <script>
+      function getIframeContent(scratch) {
+        var frameObj = document.getElementById(scratch);
+        var frameContent = frameObj.contentWindow.document.body.innerHTML;
+
+        alert("frame content : " + frameContent);
+      }
+    </script>
+    <!--In future - to store # html of iframe and parse and validate the user input-->
+
+    <!---->
+
+  </body>
+</html>
+
+
 
